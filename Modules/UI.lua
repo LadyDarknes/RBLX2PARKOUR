@@ -232,14 +232,7 @@ function UI.Init()
             getgenv().Toggles.God_Mode = Value
         end    
     })
-	 Misc_Tab:AddToggle({
-        Name = "God Mode, Ban!",
-        Default = false,
-        Callback = function(Value)
-            getgenv().Toggles.God_Mode = Value
-        end    
-    })
-    
+
     Misc_Tab:AddToggle({
         Name = "Anti Dunce",
         Default = false,
@@ -276,7 +269,7 @@ function UI.Init()
         Name = "Bag Bildirimi = True",
         Default = false,
         Callback = function(Value)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/Bag%20Esp%2B.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
         end    
     })
 
