@@ -1,11 +1,11 @@
 local UI = {}
 
--- Variables
+-- Variables çaldım helal et xgamerman626
 local Library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = Library:MakeWindow({Name = "Parkour by xgamer626#1683", HidePremium = true})
+local Window = Library:MakeWindow({Name = "By LadyOfDarkness With Xgamerman626", HidePremium = true})
 
 local Combo_Tab = Window:MakeTab({
-    Name = "Combo",
+    Name = "Kombo",
     Icon = "rbxassetid://3152629358",
     PremiumOnly = false
 })
@@ -41,7 +41,7 @@ local Wingsuit_Tab = Window:MakeTab({
 })
 
 local Cola_Tab = Window:MakeTab({
-    Name = "Cola",
+    Name = "Sarı Kula",
     Icon = "rbxassetid://9743223064",
     PremiumOnly = false
 })
@@ -53,7 +53,7 @@ local Adrenaline_Tab = Window:MakeTab({
 })
 
 local Audio_Tab = Window:MakeTab({
-    Name = "Audio",
+    Name = "SES",
     Icon = "rbxassetid://9743254397",
     PremiumOnly = false
 })
@@ -71,7 +71,7 @@ local Automatic_Tab = Window:MakeTab({
 })
 
 local Notifcations_Tab = Window:MakeTab({
-    Name = "Notifcations",
+    Name = "Bildirimler",
     Icon = "rbxassetid://9745241351",
     PremiumOnly = false
 })
@@ -79,7 +79,7 @@ local Notifcations_Tab = Window:MakeTab({
 -- Main
 function UI.Init()
     Combo_Tab:AddToggle({
-        Name = "Set Flow",
+        Name = "Flow'u ayarla",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Flow_Active = Value
@@ -87,7 +87,7 @@ function UI.Init()
     })
     
     Combo_Tab:AddToggle({
-        Name = "Set Combo",
+        Name = "Kombo'yu ayarla, Ban riski!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Combo_Level = Value
@@ -95,7 +95,7 @@ function UI.Init()
     })
     
     Combo_Tab:AddSlider({
-        Name = "Combo Level",
+        Name = "Kombo Leveli",
         Min = 1,
         Max = 5,
         Default = 1,
@@ -108,7 +108,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddToggle({
-        Name = "Infinite Wallrun",
+        Name = "Sonsuz Wallrun, Ban riski!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Wallrun = Value
@@ -116,7 +116,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddToggle({
-        Name = "Infinite Wallboost",
+        Name = "Sonsuz Wallboost, Ban riski!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Wallboost = Value
@@ -124,7 +124,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddToggle({
-        Name = "Infinite Charge",
+        Name = "Sonsuz Charge, Ban riski!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Charge = Value
@@ -132,7 +132,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddToggle({
-        Name = "Autocatch Zipline",
+        Name = "Otomatik Zipline tutucu",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Auto_CatchZipline = Value
@@ -140,7 +140,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddBind({
-        Name = "Ammo Reset",
+        Name = "Safe Reset, Kullan!",
         Default = Enum.KeyCode.F,
         Hold = false,
         Callback = function()
@@ -151,7 +151,7 @@ function UI.Init()
     })
     
     Gearless_Tab:AddBind({
-        Name = "Slide Speed",
+        Name = "Kayma hızı, Ban!",
         Default = Enum.KeyCode.C,
         Hold = false,
         Callback = function()
@@ -164,7 +164,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddBind({
-        Name = "Walk Speed",
+        Name = "Walk Speed, Ban!",
         Default = Enum.KeyCode.V,
         Hold = false,
         Callback = function()
@@ -177,7 +177,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddSlider({
-        Name = "Slide Speed",
+        Name = "Kayma Hızı, Ban riski!",
         Min = 1,
         Max = 1000,
         Default = 1,
@@ -190,7 +190,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddSlider({
-        Name = "Walk Speed",
+        Name = "Koşma hızı, Ban riski!",
         Min = 1,
         Max = 20,
         Default = 1,
@@ -204,7 +204,7 @@ function UI.Init()
     
     
     Adrenaline_Tab:AddToggle({
-        Name = "Infinite Adrenaline",
+        Name = "Infinite Adrenaline, Ban riski!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Adrenaline = Value
@@ -212,21 +212,21 @@ function UI.Init()
     })
     
     Misc_Tab:AddButton({
-        Name = "Unlock Spawns",
+        Name = "Unlock Spawns, Ban!",
         Callback = function()
 
         end
     })
     
     Misc_Tab:AddButton({
-        Name = "Unlock Badges",
+        Name = "Unlock Badges, Ban!",
         Callback = function()
             
         end
     })
     
     Misc_Tab:AddToggle({
-        Name = "God Mode",
+        Name = "God Mode, Ban!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.God_Mode = Value
@@ -250,7 +250,7 @@ function UI.Init()
     })
     
     Notifcations_Tab:AddToggle({
-        Name = "Staff Notifier",
+        Name = "Staff Bildirimi",
         Default = true,
         Callback = function(Value)
             getgenv().Toggles.Staff_Notifications = Value
@@ -258,7 +258,7 @@ function UI.Init()
     })
 
     Notifcations_Tab:AddToggle({
-        Name = "Player Notifier",
+        Name = "Oyuncu Bildirimi",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Player_Notifications = Value
@@ -266,7 +266,7 @@ function UI.Init()
     })
 
     Notifcations_Tab:AddToggle({
-        Name = "Bag Notifier",
+        Name = "Bag Bildirimi = True",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Bag_Notifications = Value
@@ -281,12 +281,12 @@ function UI.Init()
         end    
     })
     
-    Cola_Tab:AddLabel("WIP")
-    Automatic_Tab:AddLabel("WIP")
-    Grappler_Tab:AddLabel("WIP")
-    Paraglider_Tab:AddLabel("WIP")
-    Wingsuit_Tab:AddLabel("WIP")
-    Audio_Tab:AddLabel("WIP")
+    Cola_Tab:AddLabel("Eklenecek")
+    Automatic_Tab:AddLabel("Eklenecek")
+    Grappler_Tab:AddLabel("Eklenecek")
+    Paraglider_Tab:AddLabel("Eklenecek")
+    Wingsuit_Tab:AddLabel("Eklenecek")
+    Audio_Tab:AddLabel("Eklenecek")
 
     Library.Init()
 end
@@ -295,5 +295,5 @@ function UI:Notify(Notification)
     Library:MakeNotification(Notification)
 end
 
--- Return
+
 return UI
