@@ -269,7 +269,7 @@ function UI.Init()
         Name = "Bag Bildirimi = True",
         Default = false,
         Callback = function(Value)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+           
         end    
     })
 
