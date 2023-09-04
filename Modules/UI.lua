@@ -76,6 +76,12 @@ local Notifcations_Tab = Window:MakeTab({
     PremiumOnly = false
 })
 
+local ESP_Tab = Window:MakeTab({
+    Name = "ESP",
+    Icon = "rbxassetid://12803526700",
+    PremiumOnly = false
+})
+
 -- Main
 function UI.Init()
     Combo_Tab:AddToggle({
@@ -149,7 +155,8 @@ function UI.Init()
 			game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Seated")
         end    
     })
-    
+
+
     Gearless_Tab:AddBind({
         Name = "Kayma hızı, Ban!",
         Default = Enum.KeyCode.C,
@@ -217,6 +224,18 @@ function UI.Init()
 
         end
     })
+	ESP_Tab:AddButton({
+        Name = "Player Esp",
+        Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/Player_esp.lua"))()
+        end
+    })
+	ESP_Tab:AddButton({
+        Name = "Bag+ Esp",
+        Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/Bag_EspPlus.lua"))()
+        end
+    })
     
     Misc_Tab:AddButton({
         Name = "Unlock Badges, Ban!",
@@ -269,7 +288,7 @@ function UI.Init()
         Name = "Bag Bildirimi = True",
         Default = false,
         Callback = function(Value)
-           
+           getgenv().Toggles.Bag_Notifications = Value
         end    
     })
 
