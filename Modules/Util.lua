@@ -1,8 +1,8 @@
--- Locals
-local RankId = 250 -- Staff+ IDs
-local GroupId = 3468086 -- Parkour Group
 
--- Util
+local RankId = 250 
+local GroupId = 3468086 
+
+
 local Util = {}
 
 function Util:CheckStaff(Player)
@@ -32,30 +32,20 @@ function Util:Variables()
         Player_Notification = nil,
     }
     getgenv().Toggles = {
-        -- Audio
 
-        -- Cola
-
-        -- Automatic
-
-        -- Wingsuit
-
-        -- Paraglider
-
-        -- Magrail
         Infinite_Magrail = false,
 
-        -- Grappler
+   
         Infinite_Grappler = false,
 
-        -- Adrenaline
+        -- Adrenalin
         Infinite_Adrenaline = false,
 
-        -- Combo
+        -- kombo
         Flow_Active = false,
         Combo_Level = false,
 
-        -- Gearless
+        -- Gearless dash
         Infinite_Wallrun = false,
         Infinite_Wallboost = false,
         Infinite_Charge = false,
@@ -69,7 +59,7 @@ function Util:Variables()
         Anti_Trail = false,
         Anti_Dunce = false,
 
-        -- Notifcations
+        -- bildirimler
         Staff_Notifications = false,
         Player_Notifications = false,
         Bag_Notifications = false,
