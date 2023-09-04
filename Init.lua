@@ -1,11 +1,11 @@
 local RarityColours = {
-    ["Common"] = Color3.fromRGB(73, 30, 30), -- Brown
-    ["Uncommon"] = Color3.fromRGB(0, 214, 0), -- Green
-    ["Rare"] = Color3.fromRGB(51, 18, 112), -- Purple
-    ["Epic"] = Color3.fromRGB(5, 154, 168), -- Blue
-    ["Legendary"] = Color3.fromRGB(254, 254, 0), -- Yellow
-    ["Ultimate"] = Color3.fromRGB(255, 0, 0), -- Red
-    ["Resplendent"] = Color3.fromRGB(255, 255, 255), -- White
+    ["Common"] = Color3.fromRGB(73, 30, 30), 
+    ["Uncommon"] = Color3.fromRGB(0, 214, 0), 
+    ["Rare"] = Color3.fromRGB(51, 18, 112), 
+    ["Epic"] = Color3.fromRGB(5, 154, 168), 
+    ["Legendary"] = Color3.fromRGB(254, 254, 0), 
+    ["Ultimate"] = Color3.fromRGB(255, 0, 0),
+    ["Resplendent"] = Color3.fromRGB(255, 255, 255), 
 };
 
 local function AddBillboard(Part)
@@ -23,16 +23,12 @@ local function AddBillboard(Part)
 end
 
 while true do
-    for _, Bag in pairs(game.Workspace:GetChildren()) do
-        -- Making sure we're only looking at the bags
+    for _, Bag in pairs(game.Workspace:GetChildren()) do       
         if Bag.ClassName ~= "Model" then continue; end
         if not Bag:FindFirstChild("BagTouchScript") then continue; end
-
-        -- Deleting the old BillboardGui if it exists
         if Bag.Main:FindFirstChild("BillboardGui") then 
             Bag.Main:FindFirstChild("BillboardGui"):Destroy(); 
         end
-
         if getgenv().enabled then
             AddBillboard(Bag.Main);
         end
