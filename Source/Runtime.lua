@@ -1,44 +1,40 @@
--- Services
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local VirtualInputManager = game:GetService("VirtualInputManager")
 
--- Imports
-local UI = loadstring(readfile("xGamer626Parkour/Modules/UI.lua"))()
-local ACB = loadstring(readfile("xGamer626Parkour/Modules/ACB.lua"))()
-local Util = loadstring(readfile("xGamer626Parkour/Modules/Util.lua"))()
+local UI = loadstring(readfile("RBLX2PARKOUR/Modules/UI.lua"))()
+local ACB = loadstring(readfile("RBLX2PARKOUR/Modules/ACB.lua"))()
+local Util = loadstring(readfile("RBLX2PARKOUR/Modules/Util.lua"))()
 
--- Locals
+
 local Player = Players.LocalPlayer
 local PlayerGui = Player.PlayerGui
 
--- Runtime
+
 local Runtime = {}
 
 function Runtime.Init()
-    -- Set/Reset our global environmental variables.
+
     Util:Variables()
 
     task.wait(.1)
 
-    -- Run the Anticheat Bypass
+ 
     ACB.Init()
 
-    -- Set/Reset the User Interface
+ 
     UI.Init()
 
-    -- Set/Reset our Connections
-    getgenv().Connections.Stepped_RunService = RunService.RenderStepped:Connect(function()
-        -- Only run this step if player exists
-        if Player.Character:FindFirstChild("Humanoid") then
-            -- Assign the games main variables to a global variable
+   
+    getgenv().Connections.Stepped_RunService = RunService.RenderStepped:Connect(function()      
+        if Player.Character:FindFirstChild("Humanoid") then           
             getgenv().GameVariables = getupvalue(getsenv(Player.Backpack:WaitForChild("Main")).resetAmmo, 1)
 
-            -- Main toggling stuff
-            if getgenv().Toggles.Anti_Dunce == true then
-                -- This just bypasses client sided things that check if you're dunced. (NOT SERVER)
+           
+            if getgenv().Toggles.Anti_Dunce == true then           
                 local Shares = getrenv().shared
                 Shares.dunces[Player.Name] = false
             end
@@ -88,7 +84,7 @@ function Runtime.Init()
             local Zipline_Text = PlayerGui.GameplayUI.Zipline
             local Zipline_Keybind = ReplicatedStorage.PlayerData[Player.Name].Settings.Keybinds.E
             local Shift_Keybind = ReplicatedStorage.PlayerData[Player.Name].Settings.Keybinds.Shift
-            -- so cancer lol
+            -- sinir bozucu xD
             if getgenv().Toggles.Auto_CatchZipline == true then
                 if getgenv().GameVariables.ziplining == false then
                     if Zipline_Text.Visible == true then
@@ -110,7 +106,7 @@ function Runtime.Init()
             end
 
             if Player.Character.Humanoid.FloorMaterial ~= Enum.Material.Air then
-                -- Only reset the debounce if they're on the floor
+              
                 if getgenv().GameVariables.ziplining == false then
                     task.delay(1, function()
                         getgenv().Other.CanZipline = true 
