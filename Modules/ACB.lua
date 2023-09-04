@@ -1,7 +1,7 @@
--- Services
+-- Serviceleeer
 local Players = game:GetService("Players")
 
--- Locals
+-- Localeer
 local Player = Players.LocalPlayer
 
 local Points_Script = Player.PlayerScripts.Points
@@ -13,7 +13,7 @@ local GMT = getrawmetatable(game)
 setreadonly(GMT, false)
 local OLD = GMT.__namecall
 
--- ACB
+-- Anti Orospu önleyici
 local ACB = {}
 
 function ACB.Init()
@@ -57,5 +57,5 @@ function ACB.Init()
     end)
 end
 
--- Return
+
 return ACB
