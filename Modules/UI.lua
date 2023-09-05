@@ -47,19 +47,19 @@ local Cola_Tab = Window:MakeTab({
 })
 
 local Adrenaline_Tab = Window:MakeTab({
-    Name = "Adrenaline",
+    Name = "Adrenalin",
     Icon = "rbxassetid://9744692070",
     PremiumOnly = false
 })
 
 local Audio_Tab = Window:MakeTab({
-    Name = "SES",
+    Name = "Radyo",
     Icon = "rbxassetid://9743254397",
     PremiumOnly = false
 })
 
 local Misc_Tab = Window:MakeTab({
-    Name = "Miscellaneous",
+    Name = "MİSC",
     Icon = "rbxassetid://9405931578",
     PremiumOnly = false
 })
