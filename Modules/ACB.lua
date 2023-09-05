@@ -13,7 +13,7 @@ local GMT = getrawmetatable(game)
 setreadonly(GMT, false)
 local OLD = GMT.__namecall
 
--- Anti Orospu önleyici
+-- Anti c
 local ACB = {}
 
 function ACB.Init()
