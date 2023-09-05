@@ -84,7 +84,6 @@ function Runtime.Init()
             local Zipline_Text = PlayerGui.GameplayUI.Zipline
             local Zipline_Keybind = ReplicatedStorage.PlayerData[Player.Name].Settings.Keybinds.E
             local Shift_Keybind = ReplicatedStorage.PlayerData[Player.Name].Settings.Keybinds.Shift
-            -- sinir bozucu xD
             if getgenv().Toggles.Auto_CatchZipline == true then
                 if getgenv().GameVariables.ziplining == false then
                     if Zipline_Text.Visible == true then
