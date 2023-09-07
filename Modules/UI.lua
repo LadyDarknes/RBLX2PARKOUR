@@ -78,14 +78,14 @@ local Notifcations_Tab = Window:MakeTab({
 
 local ESP_Tab = Window:MakeTab({
     Name = "ESP",
-    Icon = "rbxassetid://12803526700",
+    Icon = "rbxassetid://14706940859",
     PremiumOnly = false
 })
 
 -- Main
 function UI.Init()
     Combo_Tab:AddToggle({
-        Name = "Flow'u ayarla",
+        Name = "Flow'u ayarla,Ban riski!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Flow_Active = Value
@@ -130,7 +130,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddToggle({
-        Name = "Sonsuz Charge, Ban riski!",
+        Name = "Sonsuz Charge, Safe!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Charge = Value
@@ -138,7 +138,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddToggle({
-        Name = "Otomatik Zipline tutucu",
+        Name = "Otomatik Zipline tutucu, Safe!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Auto_CatchZipline = Value
@@ -146,7 +146,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddBind({
-        Name = "Safe Reset, Kullan!",
+        Name = "Reset, Safe!",
         Default = Enum.KeyCode.F,
         Hold = false,
         Callback = function()
@@ -158,7 +158,7 @@ function UI.Init()
 
 
     Gearless_Tab:AddBind({
-        Name = "Kayma hızı, Ban!",
+        Name = "Kayma hızı, Ban sebebi!",
         Default = Enum.KeyCode.C,
         Hold = false,
         Callback = function()
@@ -171,7 +171,7 @@ function UI.Init()
     })
 
     Gearless_Tab:AddBind({
-        Name = "Walk Speed, Ban!",
+        Name = "Koşma hızı, Ban sebebi!",
         Default = Enum.KeyCode.V,
         Hold = false,
         Callback = function()
@@ -211,7 +211,7 @@ function UI.Init()
     
     
     Adrenaline_Tab:AddToggle({
-        Name = "Infinite Adrenaline, Ban riski!",
+        Name = "Infinite Adrenaline, Safe!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Adrenaline = Value
@@ -221,17 +221,17 @@ function UI.Init()
     Misc_Tab:AddButton({
         Name = "Unlock Spawns, Ban!",
         Callback = function()
-
+sendNotification("Fixlenmiştir!.")
         end
     })
 	ESP_Tab:AddButton({
-        Name = "Player Esp",
+        Name = "Player Esp, safe!",
         Callback = function()
           loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/Player_esp.lua"))()
         end
     })
 	ESP_Tab:AddButton({
-        Name = "Bag+ Esp",
+        Name = "Bag+ Esp, safe!",
         Callback = function()
          local RarityColours = {
     ["Common"] = Color3.fromRGB(73, 30, 30), 
@@ -277,7 +277,7 @@ end
     })
 
 	Misc_Tab:AddButton({
-        Name = "Open trail TP",
+        Name = "Unlock Time travel TP, Ban!",
         Callback = function()
             local savedPosition = nil
 
@@ -312,14 +312,14 @@ end)
     })
     
     Misc_Tab:AddButton({
-        Name = "Unlock Badges, Ban!",
+        Name = "Unlock Badges, Fix!",
         Callback = function()
-            
+            sendNotification("Fixlenmiştir!.")
         end
     })
     
     Misc_Tab:AddToggle({
-        Name = "God Mode, Ban!",
+        Name = "God Mode, Time Travel harici Admin yoksa ban sebebi değil!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.God_Mode = Value
@@ -327,7 +327,7 @@ end)
     })
 
     Misc_Tab:AddToggle({
-        Name = "Anti Dunce",
+        Name = "Anti Dunce, Safe!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Anti_Dunce = Value
@@ -335,7 +335,7 @@ end)
     })
     
     Misc_Tab:AddToggle({
-        Name = "Anti Trail",
+        Name = "Anti Trail, Safe!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Anti_Trail = Value
@@ -359,7 +359,7 @@ end)
     })
 
     Notifcations_Tab:AddToggle({
-        Name = "Bag Bildirimi = True",
+        Name = "Bag Bildirimi",
         Default = false,
         Callback = function(Value)
            getgenv().Toggles.Bag_Notifications = Value
@@ -367,7 +367,7 @@ end)
     })
 
     Magrail_Tab:AddToggle({
-        Name = "Infinite Magrail",
+        Name = "Sonsuz Magrail, safe!",
         Default = false,
         Callback = function(Value)
             getgenv().Toggles.Infinite_Magrail = Value
