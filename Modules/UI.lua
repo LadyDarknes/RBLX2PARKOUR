@@ -78,7 +78,7 @@ local Notifcations_Tab = Window:MakeTab({
 
 local ESP_Tab = Window:MakeTab({
     Name = "ESP",
-    Icon = "rbxassetid://14706940846",
+    Icon = "rbxassetid://14706970218",
     PremiumOnly = false
 })
 
