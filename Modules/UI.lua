@@ -236,6 +236,41 @@ function UI.Init()
          loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/Bag_EspPlus.lua"))()
         end
     })
+
+	Misc_Tab:AddButton({
+        Name = "Open trail TP",
+        Callback = function()
+            local savedPosition = nil
+
+local function sendNotification(message)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Konum İşlemi",
+        Text = message,
+        Duration = 2
+    })
+end
+
+-- K tuşuna basıldığında
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.K then
+        savedPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        sendNotification("Konum kaydedildi.")
+    end
+end)
+
+-- L tuşuna basıldığında
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.L then
+        if savedPosition then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savedPosition)
+            sendNotification("Kaydedilen konuma ışınlandınız.")
+        else
+            sendNotification("Kaydedilen konum bulunamadı.")
+        end
+    end
+end)
+        end
+    })
     
     Misc_Tab:AddButton({
         Name = "Unlock Badges, Ban!",
