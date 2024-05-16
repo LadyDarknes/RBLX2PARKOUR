@@ -5,9 +5,9 @@ local UserInputService = game:GetService("UserInputService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local VirtualInputManager = game:GetService("VirtualInputManager")
 
-local UI = loadstring(readfile("RBLX2PARKOUR/Modules/UI.lua"))()
-local ACB = loadstring(readfile("RBLX2PARKOUR/Modules/ACB.lua"))()
-local Util = loadstring(readfile("RBLX2PARKOUR/Modules/Util.lua"))()
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/UI.lua"))()
+local ACB = loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/ACB.lua"))()
+local Util = loadstring(game:HttpGet("https://raw.githubusercontent.com/LadyDarknes/RBLX2PARKOUR/main/Modules/Util.lua"))()
 
 
 local Player = Players.LocalPlayer
