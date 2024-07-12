@@ -1,6 +1,6 @@
 local UI = {}
 
--- Variables çaldım helal et xgamerman626
+--  sikişhane
 local Library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = Library:MakeWindow({Name = "By LadyOfDarkness With Xgamerman626", HidePremium = true})
 
