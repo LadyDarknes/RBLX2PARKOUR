@@ -8,7 +8,9 @@ local VirtualInputManager = game:GetService("VirtualInputManager")
 
 local UI = loadstring(readfile("RBLX2PARKOUR/Modules/UI.lua"))()
 local ACB = loadstring(readfile("RBLX2PARKOUR/Modules/ACB.lua"))()
-local Util = loadstring(readfile("RBLX2PARKOUR/Modules/Util.lua"))()
+local UI_Content = readfile("RBLX2PARKOUR/Modules/UI.lua")
+if not UI_Content then error("UI.lua dosyası bulunamadı!") end
+local UI = loadstring(UI_Content)()
 
 local Player = Players.LocalPlayer
 local PlayerGui = Player.PlayerGui
