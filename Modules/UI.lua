@@ -1,8 +1,3 @@
-local UI = {}
-
---  sikişhane
-local Library = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
-
 -- Rayfield UI Kütüphanesi
 local Library = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
@@ -44,6 +39,50 @@ Combo_Tab:CreateSlider({
     end
 })
 
+-- Gearless Sekmesi
+local Gearless_Tab = Window:CreateTab("Gearless", 4483362458)
+Gearless_Tab:CreateToggle({
+    Name = "Sonsuz Wallrun, Ban riski!",
+    CurrentValue = false,
+    Callback = function(Value)
+        getgenv().Toggles.Infinite_Wallrun = Value
+    end
+})
+
+Gearless_Tab:CreateToggle({
+    Name = "Sonsuz Wallboost, Ban riski!",
+    CurrentValue = false,
+    Callback = function(Value)
+        getgenv().Toggles.Infinite_Wallboost = Value
+    end
+})
+
+Gearless_Tab:CreateToggle({
+    Name = "Sonsuz Charge, Safe!",
+    CurrentValue = false,
+    Callback = function(Value)
+        getgenv().Toggles.Infinite_Charge = Value
+    end
+})
+
+Gearless_Tab:CreateToggle({
+    Name = "Otomatik Zipline tutucu, Safe!",
+    CurrentValue = false,
+    Callback = function(Value)
+        getgenv().Toggles.Auto_CatchZipline = Value
+    end
+})
+
+-- Adrenalin Sekmesi
+local Adrenaline_Tab = Window:CreateTab("Adrenalin", 4483362458)
+Adrenaline_Tab:CreateToggle({
+    Name = "Infinite Adrenaline, Safe!",
+    CurrentValue = false,
+    Callback = function(Value)
+        getgenv().Toggles.Infinite_Adrenaline = Value
+    end
+})
+
 -- Misc Sekmesi
 local Misc_Tab = Window:CreateTab("MİSC", 4483362458)
 Misc_Tab:CreateToggle({
@@ -80,6 +119,14 @@ Notifications_Tab:CreateToggle({
     end
 })
 
+Notifications_Tab:CreateToggle({
+    Name = "Bag Bildirimi",
+    CurrentValue = false,
+    Callback = function(Value)
+        getgenv().Toggles.Bag_Notifications = Value
+    end
+})
+
 -- UI Başlatma
 Library:Notify({
     Title = "UI Yüklendi!",
@@ -93,7 +140,3 @@ Library:Notify({
         }
     }
 })
-
-
-
-return UI
